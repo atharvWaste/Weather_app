@@ -1,0 +1,54 @@
+.loction{
+          width:150px;
+          height:30px;
+          background-color:#1a282c75;
+          margin-top:15px;
+          margin-left:580px;
+          border-radius:15px;
+          position:absolute;
+}
+.cityName{
+    background:transparent; 
+    border:none;
+    position:relative;
+}
+
+.inputcityName{
+    width:75px;
+     height:75px;
+     background:transparent; 
+     border:none;
+     position:relative;
+     display:flex;
+     align-items:center;
+      justify-content:center; 
+      margin-top:-25px;
+      margin-left:15px; 
+      color:#fff;
+    font-size:18px;
+}
+
+.Logo{
+    margin-left:550px
+}
+
+.Logoimg{
+    width:250px
+}
+
+.templdisplay{
+    background:transparent;
+     border:none;
+}
+#TempDisplay{
+       width:75px; 
+       height:75px;
+       margin-left:640px;
+        font-size:50px;
+        background:transparent; 
+        border:none;
+}
+
+.looksLike{
+    margin-left:600px;
+}

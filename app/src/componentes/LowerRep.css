@@ -1,0 +1,34 @@
+.sectionStyle{
+    width:900px;
+     height:175px; 
+     background-color:#1a282c75;
+ margin-left:200px;
+  margin-top:150px; 
+  border-radius:25px;
+  cursor:pointer;
+ z-index: 10;
+ position: fixed;
+ display: flex;
+}
+
+.boxStyle{
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 250px;
+    height: 125px;
+   background: linear-gradient(275deg,rgba(159, 199, 204, 0.107) 0%, rgba(0, 157, 181, 0.074) 100%);
+}
+
+.visibilityREP{
+    margin-top: 5px;
+    color: #fff;
+}
+
+.imgclass{
+     height: 50px;
+            width: 50px;
+            margin-left:5px;
+            margin-top:5px;
+}
