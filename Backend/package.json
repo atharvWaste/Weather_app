@@ -1,0 +1,21 @@
+{
+  "name": "ekalavy_backend",
+  "version": "1.0.0",
+  "description": "THE STARTING OF THE BACKEND IN MY LIFE😊.",
+  "license": "ISC",
+  "author": "Ekalavy",
+  "type": "modular",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
