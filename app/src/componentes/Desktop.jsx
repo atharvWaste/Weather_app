@@ -7,7 +7,7 @@ import { useState } from "react";
 
 import axios from 'axios'
 import './desktop.css'
-const Center = () =>{
+const Center = (props) =>{
 const [description, setDescription] = useState('');
 const [temp , setTemp] = useState('');
 useEffect (() =>{
@@ -25,7 +25,7 @@ axios.get('http://localhost:3000/')
     return (
         
       <div >
-        <Aside />
+        <Aside  />
 
         <div className="loction">
           <label htmlFor="cityName"  className='cityName'></label>

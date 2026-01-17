@@ -1,0 +1,20 @@
+.SectionStyle{
+     width:900px;
+     height:500px; 
+     background-color:#1a282c75;
+ margin-left:275px;
+  margin-top:100px; 
+  border-radius:25px;
+  cursor:pointer;
+ z-index: 10;
+position: fixed;
+ display: flex;
+}
+
+.Row{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 100px;
+}

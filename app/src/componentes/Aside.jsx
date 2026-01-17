@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 import "./Aside.css";
 
-const Aside = () => {
-
+const Aside = (props) => {
 
   const [units, changer] = useState("Deg");
 
@@ -16,6 +15,7 @@ const Aside = () => {
     }
   };
 
+
   return (
     <div className="outterBox">
       <div>
@@ -26,7 +26,7 @@ const Aside = () => {
        <Link to="/location" className="aclass">Location</Link>
       </div>
       <div className="AskAI">
-       <Link to="/info" className="aclass">Info</Link>
+       <Link to="/info" className="aclass" >Indo</Link>
       </div>
     </div>
   );

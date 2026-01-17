@@ -4,7 +4,7 @@
       height:600px;
        margin:60px;
         border-radius:25px;
-        position:absolute;
+        position:fixed;
 }
 
 #Conveter {
@@ -17,7 +17,7 @@
         border-radius: 15px;
         margin-top:45px;
         margin-left:6px;
-        position:relative;
+        /* position:relative; */
         border:none;
         cursor:pointer;
 }
@@ -31,7 +31,7 @@
         border-radius: 15px;
         margin-top:45px;
         margin-left:6px;
-        position:relative;
+        /* position:relative; */
         border:none;
         cursor:pointer;
 }
@@ -46,7 +46,7 @@
         border-radius: 15px;
         margin-top:45px;
         margin-left:6px;
-        position:relative;
+        /* position:relative; */
         border:none;
         cursor:pointer;
 }
@@ -61,7 +61,7 @@
         border-radius: 15px;
         margin-top:45px;
         margin-left:6px;
-        position:relative;
+        /* position:relative; */
         border:none;
         cursor:pointer;
 }

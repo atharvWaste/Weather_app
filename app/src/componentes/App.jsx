@@ -1,7 +1,7 @@
 
 import Center from './Desktop'
 import Location from './Location';
-import Info from './info';
+import Information from './Information';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ const App = () =>{
 
         <Route path="/location" element= {<Location />} />
 
-         <Route path="/info" element= {< Info/>} />
+         <Route path="/info" element= {< Information/>} />
       </Routes>
    
     </section>
