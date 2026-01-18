@@ -3,15 +3,16 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Aside.css";
 
-const Aside = (props) => {
-
-  const [units, changer] = useState("Deg");
-
+const Aside = () => {
+// deg => true ............ fir => false
+  const [units, changer] = useState("deg");
   const hadChanged = () => {
-    if (units === "Deg") {
-      changer("Fir");
+    changer();
+    if (units === "deg") {
+
+      changer("fri");
     } else {
-      changer("Deg");
+      changer("deg");
     }
   };
 

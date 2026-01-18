@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import './RightCol.css';
 const RightCol = () => {
+  const[units, setunits] = useState('-273.15');
+
   return (
     <section className='sectionclass'>
       <p className='Hclass'>Weather Forcasting</p>
@@ -11,7 +14,7 @@ const RightCol = () => {
         <img src="src\assets\icons\rainy.svg" className='imgclass'/>
         <div className='loclass'>
           <label htmlFor="tempYest" ></label>
-          <input type="text" id="tempYest" value="15Deg" readOnly className='inputclass'/>
+          <input type="text" id="tempYest" value='15' readOnly className='inputclass'/>
         </div>
       </div>
 
@@ -23,7 +26,7 @@ const RightCol = () => {
         <img src="src\assets\icons\rainy.svg" className='imgclass'/>
         <div>
           <label htmlFor="tempYest"></label>
-          <input type="text" id="tempYest" value="15Deg" readOnly className='inputclass' />
+          <input type="text" id="tempYest" value="15" readOnly className='inputclass' />
         </div>
       </div>
 
@@ -34,7 +37,7 @@ const RightCol = () => {
         <img src="src\assets\icons\rainy.svg" className='imgclass'/>
         <div>
           <label htmlFor="tempYest"></label>
-          <input type="text" id="tempYest" value="15Deg" readOnly className='inputclass' />
+          <input type="text" id="tempYest" value="15" readOnly className='inputclass' />
         </div>
       </div>
     </section>

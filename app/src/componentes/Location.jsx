@@ -21,21 +21,36 @@ const Location = () => {
 const FunValueOfInput=(valuOfContery, valuOfState, valuOfCity )=>{
 
  if (valuOfContery.length >= 3 && valuOfState.length>= 3 && valuOfCity.length >= 3) {
-  
-const ArrayOfInput = [valuOfContery, valuOfState, valuOfCity];
-console.log(ArrayOfInput);
+const ArrayOfInput = [valuOfContery, valuOfState,valuOfCity];
+const sendData = async () => {
+  try {
+    const response = await axios.put("http://localhost:3000/", ArrayOfInput);
+    console.log("server responding", response.data);
+    return response.data;
+  } catch (error) {
+    console.error('error sending data:', error.response?.data || error.message);
+    throw error;
+  }
+};
 
-    axios.put("http://localhost:3000/Api", ()=>{
-      ArrayOfInput
-    })
 
- }
+sendData()
+ //  Error :-😅😌 day 2 of solving and using all power of Ai too , i cant spot a basic bug🥲 , 
+//  console error :- GET http://localhost:3000/test 404 (Not Found) 
+// console error :- Connecting to 'http://localhost:3000/.well-known/appspecific/com.chrome.devtools.json' violates the following Content Security Policy directive: "default-src 'none'". The request has been blocked. Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.
+// SOLUTION:- U not call response function😒  sendData();
+
+} else{
+  alert(`Wrong inputs`)
+}
+
+
 }
 
   return (
     <section className="backGroundBox">
       <form   onSubmit={(e) => {
-    e.preventDefault();
+     e.preventDefault();
     FunValueOfInput(valuOfContery, valuOfState, valuOfCity);
   }}>
         <h2 className="HeadingClass">Give your current loction</h2>

@@ -18,7 +18,7 @@ axios.get('http://localhost:3000/')
    <img src="src\assets\icons\visibility.svg" className='imgclass' />
 <p className='visibilityREP'>
 
-   Visibility(in m)   = {Visibility}
+   Visibility(in m)   = {Visibility ||"Data is getting from sateliete..."}
 </p>
        
 </div>
@@ -26,7 +26,7 @@ axios.get('http://localhost:3000/')
 <img src="src\assets\icons\Arrow.svg" className='imgclass' />
 <p className='visibilityREP'>
 
-   Visibility(in m)   = {Visibility}
+   Visibility(in m)   = {Visibility ||"Data is getting from sateliete..."}
 </p>
 
 </div>
