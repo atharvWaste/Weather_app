@@ -1,7 +1,7 @@
 import "./Location.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import axios from 'axios'
 
 const Location = () => {
@@ -57,28 +57,33 @@ sendData()
         <hr />
         <div className="SectionForInput">
           <label className="Lable" htmlFor="Contery">
-            Enter the Contery
+            Enter The Name Of Contery
           </label>
           <input type="text" id="Contery" value={valuOfContery} onChange={(e) => setvaluOfContery(e.target.value)} required />
         </div>
 
         <div className="SectionForInput">
           <label className="Lable" htmlFor="State">
-            Enter the state
+            Enter The Name Of state
           </label>
           <input type="text" id="State" value={valuOfState} onChange={(e) => setvaluOfState(e.target.value)}required />
         </div>
 
         <div className="SectionForInput">
           <label className="Lable" htmlFor="City">
-            Enter the City
+            Enter The Name Of City
           </label>
           <input type="text" id="City" value={valuOfCity} onChange={(e) => setvaluOfCity(e.target.value)} required />
         </div>
-
+<div className="botBtn">
         <button className="Submit" onClick={() => FunValueOfInput(valuOfContery,valuOfState,valuOfCity)}>
           Submit
         </button>
+        <button className="Submit">
+<Link to="/" className="aclass">Dasktop</Link>
+        </button>
+        </div>
+        
       </form>
     </section>
   );

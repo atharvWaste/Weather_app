@@ -3,18 +3,24 @@
           height:30px;
           background-color:#1a282c75;
           margin-top:15px;
-          margin-left:580px;
+          margin-left:600px;
           border-radius:15px;
           position:absolute;
 }
+/* .topBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+} */
 .cityName{
+    width: 75px;
     background:transparent; 
     border:none;
     position:relative;
 }
 
 .inputcityName{
-    width:75px;
+    width:150px;
      height:75px;
      background:transparent; 
      border:none;
@@ -29,7 +35,8 @@
 }
 
 .Logo{
-    margin-left:550px
+    margin-left:550px;
+    margin-top: 25px;
 }
 
 .Logoimg{

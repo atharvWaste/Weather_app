@@ -13,32 +13,32 @@ const Info = (props) => {
         <div className="Row">
           <div className="boxStyle">
             <img src="src\assets\icons\visibility.svg" className="imgclass" />
-            <p className="visibilityREP">Visibility(in m) = {Visibility}</p>
+            <p className="visibilityREP">Max-Temp of Day{ "Data is getting from sateliete..."}</p>
           </div>
 
           <div className="boxStyle">
             <img src="src\assets\icons\Arrow.svg" className="imgclass" />
-            <p className="visibilityREP">Visibility(in m) = {Visibility}</p>
+            <p className="visibilityREP">Air quality = { "Testing current Air sample"}</p>
           </div>
 
           <div className="boxStyle">
             <img src="src\assets\icons\Arrow.svg" className="imgclass" />
-            <p className="visibilityREP">Visibility(in m) = {Visibility}</p>
+            <p className="visibilityREP">Visibility(in m) = {"Data is getting from sateliete..."}</p>
           </div>
         </div>
 
         <div className="Row">
           <div className="boxStyle">
             <img src="src\assets\icons\Arrow.svg" className="imgclass" />
-            <p className="visibilityREP">Visibility(in m) = {Visibility}</p>
+            <p className="visibilityREP">Min-Temp of Day ={ "Data is getting from sateliete..."}</p>
           </div>
           <div className="boxStyle">
             <img src="src\assets\icons\Arrow.svg" className="imgclass" />
-            <p className="visibilityREP">Visibility(in m) = {Visibility}</p>
+            <p className="visibilityREP">Wind Direction = {"Data is getting from sateliete..."}</p>
           </div>
           <div className="boxStyle">
             <img src="src\assets\icons\Arrow.svg" className="imgclass" />
-            <p className="visibilityREP">Visibility(in m) = {Visibility}</p>
+            <p className="visibilityREP">Visibility = {Visibility}</p>
           </div>
         </div>
       </section>

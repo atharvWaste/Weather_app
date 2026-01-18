@@ -5,14 +5,14 @@ import "./Aside.css";
 
 const Aside = () => {
 // deg => true ............ fir => false
-  const [units, changer] = useState("deg");
+  const [units, changer] = useState("DEG");
   const hadChanged = () => {
     changer();
-    if (units === "deg") {
+    if (units === "DEG") {
 
-      changer("fri");
+      changer("FER");
     } else {
-      changer("deg");
+      changer("DEG");
     }
   };
 
@@ -28,6 +28,9 @@ const Aside = () => {
       </div>
       <div className="AskAI">
        <Link to="/info" className="aclass" >Indo</Link>
+      </div>
+       <div className="changeLocation">
+       <Link to="/" className="aclass">Dasktop</Link>
       </div>
     </div>
   );

@@ -20,20 +20,27 @@
     margin-top: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin-left: 25px;
 }
 
 #State{
     margin-left: 15px;
 }
 
-
+.botBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     margin-top: 50px;
+}
 .Submit{
     border: none;
     background: linear-gradient(275deg,rgba(159, 199, 204, 1) 0%, rgba(0, 157, 181, 1) 100%);
     border-radius: 15px;
     width: 113px;
     height: 25px;
-     margin-left: 200px;
-    margin-top: 50px;
+     margin-left: 20px;
+    
 }
+

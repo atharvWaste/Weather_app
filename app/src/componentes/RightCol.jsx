@@ -9,36 +9,37 @@ const RightCol = () => {
       <hr className='hrclass'/>
 
       <div className="block">
-        <p className='pclass'>Yesterday</p>
-
-        <img src="src\assets\icons\rainy.svg" className='imgclass'/>
         <div className='loclass'>
+        <p className='pclass'>Yesterday</p>
+        <img src="src\assets\icons\rainy.svg" className='imgclass'/>
+        </div>
           <label htmlFor="tempYest" ></label>
           <input type="text" id="tempYest" value='15' readOnly className='inputclass'/>
-        </div>
+        
       </div>
 
       {/* block2 */}
 
       <div className="block">
-        <p className='pclass'>Yesterday</p>
-
-        <img src="src\assets\icons\rainy.svg" className='imgclass'/>
-        <div>
-          <label htmlFor="tempYest"></label>
-          <input type="text" id="tempYest" value="15" readOnly className='inputclass' />
+        <div className='loclass'> 
+        <p className='pclass'>Sunrise</p>
+        <img src="src\assets\icons\day.svg" className='imgclass'/>
         </div>
+          <label htmlFor="tempYest"></label>
+          <input type="text" id="tempYest" value="6am" readOnly className='inputclass' />
+       
       </div>
 
       {/* block3 */}
 
       <div className="block">
-        <p className='pclass'>Yesterday</p>
-        <img src="src\assets\icons\rainy.svg" className='imgclass'/>
-        <div>
-          <label htmlFor="tempYest"></label>
-          <input type="text" id="tempYest" value="15" readOnly className='inputclass' />
+        <div className='loclass'> 
+        <p className='pclass'>Sunset</p>
+        <img src="src\assets\icons\night.svg" className='imgclass'/>
         </div>
+          <label htmlFor="tempYest"></label>
+          <input type="text" id="tempYest" value="6pm" readOnly className='inputclass' />
+        
       </div>
     </section>
   );
