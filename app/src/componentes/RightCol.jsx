@@ -1,8 +1,29 @@
 import { useState } from 'react';
 import './RightCol.css';
-const RightCol = () => {
-  const[units, setunits] = useState('-273.15');
+import axios from 'axios';
 
+const RightCol = () => {
+  const[Sunset, setSunset] = useState('');
+const[Sunrise, setSunrise] = useState('');
+  const[AirPressure, setAirPressure] = useState('');
+axios.get("http://localhost:3000")
+.then(response =>{
+  console.log(AirPressure);
+const unixSunset = response.data.sys.sunset;
+  const unixSunrise = response.data.sys.sunrise; //Api give the time in unix format in sec from 1970
+  const aPressuerStore = response.data.main.pressure;
+  setAirPressure(aPressuerStore);
+  //the block of code will convert it in only time
+const nSunrisetime = new Date(unixSunrise*1000);
+const timeSunriseOnly = nSunrisetime.toLocaleTimeString();
+console.log("time", timeSunriseOnly);
+setSunrise(timeSunriseOnly);
+
+const nSunsettime = new Date(unixSunset*1000);
+const timeSunsetOnly = nSunsettime.toLocaleTimeString();
+console.log("time", timeSunsetOnly);
+setSunset(timeSunsetOnly);
+}) 
   return (
     <section className='sectionclass'>
       <p className='Hclass'>Weather Forcasting</p>
@@ -10,15 +31,13 @@ const RightCol = () => {
 
       <div className="block">
         <div className='loclass'>
-        <p className='pclass'>Yesterday</p>
-        <img src="src\assets\icons\rainy.svg" className='imgclass'/>
+        <p className='pclass'>Atmospheric Pressure</p>
+        <img src="src\assets\icons\atmospheric.png" className='imgclass'/>
         </div>
           <label htmlFor="tempYest" ></label>
-          <input type="text" id="tempYest" value='15' readOnly className='inputclass'/>
+          <input type="text" id="tempYest" value={AirPressure || "😥"} readOnly className='inputclass'/>
         
       </div>
-
-      {/* block2 */}
 
       <div className="block">
         <div className='loclass'> 
@@ -26,11 +45,9 @@ const RightCol = () => {
         <img src="src\assets\icons\day.svg" className='imgclass'/>
         </div>
           <label htmlFor="tempYest"></label>
-          <input type="text" id="tempYest" value="6am" readOnly className='inputclass' />
+          <input type="text" id="tempYest" value={Sunrise || "😥"} readOnly className='inputclass' />
        
       </div>
-
-      {/* block3 */}
 
       <div className="block">
         <div className='loclass'> 
@@ -38,7 +55,7 @@ const RightCol = () => {
         <img src="src\assets\icons\night.svg" className='imgclass'/>
         </div>
           <label htmlFor="tempYest"></label>
-          <input type="text" id="tempYest" value="6pm" readOnly className='inputclass' />
+          <input type="text" id="tempYest" value={Sunset || "😥"} readOnly className='inputclass' />
         
       </div>
     </section>
