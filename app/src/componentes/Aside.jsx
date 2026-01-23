@@ -8,11 +8,12 @@ const Aside = () => {
   const [units, changer] = useState("DEG");
   const hadChanged = () => {
     changer();
-    if (units === "DEG") {
-
+    if (units === "DEG"){
       changer("FER");
+      
     } else {
       changer("DEG");
+   
     }
   };
 

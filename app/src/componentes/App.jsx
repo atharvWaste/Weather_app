@@ -2,21 +2,20 @@
 import Center from './Desktop'
 import Location from './Location';
 import Information from './Information';
-
 import { Routes, Route } from 'react-router-dom';
 
+
 const App = () =>{
-  return  <section>
-    
-      <Routes>
-        <Route path="/" element={<Center /> }/>
 
-        <Route path="/location" element= {<Location />} />
+  return <main>
+       <Routes >
+        <Route path="/" element={<Center />}/>
 
-         <Route path="/info" element= {< Information/>} />
+        <Route path="/location" element= {<Location />}/>
+
+        <Route path="/info" element= {< Information/>}/>
       </Routes>
-   
-    </section>
+    </main> 
 }
 
 export default App;

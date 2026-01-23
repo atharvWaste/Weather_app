@@ -7,23 +7,36 @@ import { useState } from "react";
 
 import axios from "axios";
 import "./desktop.css";
-const Center = (props) => {
-  const [Place, setPlace] = useState("")
+
+const Center = () => {
+  const svgSourceArray = ["clear_sky", "few_clouds", "rain", "scattered_clouds", "shower_rain", "snow" ,"thunderstorm"];
+
+  const [svgSource, setSvgSource] = useState("clear_sky");
+  const [Place, setPlace] = useState("");
   const [description, setDescription] = useState("");
   const [temp, setTemp] = useState("");
+
   useEffect(() => {
     axios.get("http://localhost:3000/").then((Response) => {
       const locationName = Response.data.name;
       const des = Response.data.weather[0].description;
       const DegTemp = Math.round(Response.data.main.temp - 273.15);
-      console.log(locationName);
-      
+
       setPlace(locationName);
       setTemp(DegTemp);
       setDescription(des);
-      console.log(DegTemp, des);
-    });
+          
+      const formattedDesc = des.replaceAll(" ", "_");
+
+      const finalIcon = svgSourceArray.includes(formattedDesc)
+  ? formattedDesc
+  : "clear_sky";
+  setSvgSource(finalIcon);
+ });
   }, []);
+
+
+
   return (
     <div>
       <Aside />
@@ -38,12 +51,9 @@ const Center = (props) => {
             readOnly
           />
         </div>
+
         <div className="Logo">
-          <img
-            src="src\assets\icons\rainy.svg"
-            alt="Rain"
-            className="Logoimg"
-          />
+           <img src={`/${svgSource}.svg`} className="Logoimg" />
         </div>
       </div>
       <div className="tempdisplay">

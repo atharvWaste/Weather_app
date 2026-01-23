@@ -1,5 +1,4 @@
 import './LowerRep.css'
-import { useEffect } from "react";
 import { useState } from "react";
 import axios from 'axios'
 
@@ -14,28 +13,26 @@ axios.get('http://localhost:3000/')
     const humidityStore = Response.data.main.humidity;
     setHumidity(humidityStore)
     setWindspeed(windStore);
-    console.log(Visibility);
-    console.log(WindSpeed);
     setVisibility(Visibi);
 })
 
     return <section className='sectionStyle'>
 <div className='boxStyle'>
-   <img src="src\assets\icons\visibility.svg" className='imgclass' />
+   <img src="src\assets\icons\stratic_icon\visibility.svg" className='imgclass' />
 <p className='visibilityREP'>
    Visibility(in m) = {Visibility ||"Data is getting from sateliete..."}
 </p>
        
 </div>
 <div className='boxStyle'>
-<img src="src\assets\icons\Arrow.svg" className='imgclass' />
+<img src="src\assets\icons\stratic_icon\Arrow.svg" className='imgclass' />
 <p className='visibilityREP'>
    wind Speed(in meter/sec) = {WindSpeed ||"Data is getting from sateliete..."}
 </p>
 
 </div>
 <div className='boxStyle'>
-    <img src="src\assets\icons\humidity.png" className='imgclass' />
+    <img src="src\assets\icons\stratic_icon\humidity.png" className='imgclass' />
 <p className='visibilityREP'>
    Humidity(in %) = {Humidity ||"Data is getting from sateliete..."}
 </p>
