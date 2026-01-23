@@ -3,17 +3,16 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Aside.css";
 
-const Aside = () => {
+const Aside = ({setisClicked} ) => {
 // deg => true ............ fir => false
   const [units, changer] = useState("DEG");
   const hadChanged = () => {
-    changer();
     if (units === "DEG"){
-      changer("FER");
-      
+      changer("FER(°F)");
+      setisClicked(false);
     } else {
-      changer("DEG");
-   
+      changer("DEG(°C)");
+      setisClicked(true);
     }
   };
 
@@ -28,7 +27,7 @@ const Aside = () => {
        <Link to="/location" className="aclass">Location</Link>
       </div>
       <div className="AskAI">
-       <Link to="/info" className="aclass" >Indo</Link>
+       <Link to="/info" className="aclass" >Info</Link>
       </div>
        <div className="changeLocation">
        <Link to="/" className="aclass">Dasktop</Link>

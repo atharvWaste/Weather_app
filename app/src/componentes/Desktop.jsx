@@ -9,8 +9,9 @@ import axios from "axios";
 import "./desktop.css";
 
 const Center = () => {
+  const [isClicked, setisClicked] = useState(true);
+const [UniesOfTemp, setUniesOfTemp] = useState("Deg")
   const svgSourceArray = ["clear_sky", "few_clouds", "rain", "scattered_clouds", "shower_rain", "snow" ,"thunderstorm"];
-
   const [svgSource, setSvgSource] = useState("clear_sky");
   const [Place, setPlace] = useState("");
   const [description, setDescription] = useState("");
@@ -20,26 +21,34 @@ const Center = () => {
     axios.get("http://localhost:3000/").then((Response) => {
       const locationName = Response.data.name;
       const des = Response.data.weather[0].description;
-      const DegTemp = Math.round(Response.data.main.temp - 273.15);
-
+      const Temp = Math.round(Response.data.main.temp - 273.15);
+const FerTemp =  Math.round(Temp*1.8+32);
       setPlace(locationName);
-      setTemp(DegTemp);
       setDescription(des);
-          
-      const formattedDesc = des.replaceAll(" ", "_");
 
-      const finalIcon = svgSourceArray.includes(formattedDesc)
-  ? formattedDesc
-  : "clear_sky";
+          // for svg change
+      const formattedDesc = des.replaceAll(" ", "_");
+      const finalIcon = svgSourceArray.includes(formattedDesc) ? formattedDesc : "clear_sky";
   setSvgSource(finalIcon);
+
+  // for deg to fer convert
+if (isClicked === false) {
+      setTemp(FerTemp);
+      console.log("fer is on");
+      setUniesOfTemp("°F");
+}else{
+  setTemp(Temp);
+  console.log("deg is on");
+  setUniesOfTemp("°C");
+}
  });
-  }, []);
+  }, [isClicked]);
 
 
 
   return (
     <div>
-      <Aside />
+      <Aside setisClicked={setisClicked}/>
       <div className="topBox">
         <div className="loction">
           <label htmlFor="cityName" className="cityName"></label>
@@ -59,6 +68,7 @@ const Center = () => {
       <div className="tempdisplay">
         <label htmlFor="TempDisplay" className="templdisplay"></label>
         <input type="number" id="TempDisplay" value={temp} readOnly />
+        <span>{UniesOfTemp}</span>
       </div>
       <div className="looksLike">
         <p>Looks like {description}.</p>
